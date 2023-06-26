@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURIS-Admin add new Register</title>
+    <link rel="stylesheet" href="Student_css/student_dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Admin Navigation Bar -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="logo" href="https://ahduni.edu.in/" target="_blank"><img src="image/au_logo.png"
+                    alt="University Logo"></a>
+        </div>
+    </nav>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <!-- <img src="image/gate_AU.jfif" class="mb-3 sign" alt="Gate of Ahmedabad University"> -->
+        <div class="col-lg-6 mx-auto">
+
+            <form action="/Admin_register" method="post">
+                <!-- For taking it is a student or professor or administrator -->
+                <div class="bd-example m-0 border-0">
+                    <select class="form-select form-select-lg mb-3 " name="role" aria-label=".form-select-lg example">
+                        <option value="Student" selected>Student</option>
+                        <option value="Professor">Professor</option>
+                        <option value="Administrator">Administrator</option>
+                    </select>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <input type="text" name="name" class="form-control" id="floatingInput"
+                        placeholder="Enter your name" required>
+                    <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" name="Educational_Background" class="form-control" id="floatingInput"
+                        placeholder="Enter your Educational Background">
+                    <label for="floatingInput">Educational Background</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" name="per_email" class="form-control" id="floatingInput"
+                        placeholder="Enter personal email" required>
+                    <label for="floatingInput">Personal Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" name="mobile_number" class="form-control" id="floatingInput"
+                        placeholder="Enter mobile number" required>
+                    <label for="floatingInput">Mobile Number</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" name="birthday" class="form-control" id="floatingInput" placeholder="yyyy-mm-dd"  required>
+                    <label for="floatingInput">Date of Birth</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="email" name="col_email" class="form-control" id="floatingInput"
+                        placeholder="Enter new college email id"  required >
+                    <label for="floatingInput">New College Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="password" class="form-control" id="floatingPassword"
+                        placeholder="Enter your Password"  required>
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="col-auto mb-3">
+                    <span id="passwordHelpInline" class="form-text">
+                        Must be 8-20 characters long.
+                    </span>
+                </div>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
